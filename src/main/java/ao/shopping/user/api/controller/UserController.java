@@ -17,21 +17,21 @@ import ao.shopping.user.Service.UserService;
 public class UserController { 
 @Autowired 
 private UserService userService; 
-@GetMapping("/ser/") 
+@GetMapping("/user/") 
 public List<UserDTO> getUsers() {         
        List<UserDTO> usuarios = userService.getAll();         
 return usuarios; 
    } 
-@GetMapping("/ser/{id}") 
+@GetMapping("/user/{id}") 
 UserDTO findById(@PathVariable Long id) { 
 return userService.findById(id); 
    } 
 
 @PostMapping("/user") 
-UserDTO newUser(@RequestBody UserDTO serDTO) {         
-return userService.save(serDTO); 
+UserDTO newUser(@RequestBody UserDTO userDTO) {         
+return userService.save(userDTO); 
    } 
-@GetMapping("/ser/cpf/{bi}") 
+@GetMapping("/user/bi/{bi}") 
 UserDTO findByCpf(@PathVariable String bi) { 
 return userService.findByCpf(bi); 
    } 

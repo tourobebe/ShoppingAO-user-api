@@ -1,6 +1,6 @@
 create schema if not exists users;
 
-create table sers. ser ( 
+create table users.users ( 
    id bigserial primary key, 
    nome varchar(100) not null, 
    bi varchar(100) not null, 

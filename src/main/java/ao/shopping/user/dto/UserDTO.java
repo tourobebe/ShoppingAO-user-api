@@ -1,6 +1,7 @@
 package ao.shopping.user.dto;
 
 import java.util.Date;
+import ao.shopping.user.Model.User;
 
 public class UserDTO {
 private String nome;
@@ -51,6 +52,18 @@ public Date getDataCadastro() {
 public void setDataCadastro(Date dataCadastro) {
     this.dataCadastro = dataCadastro;
 } 
+
+public static UserDTO convert(User user) { 
+   UserDTO userDTO = new UserDTO(); 
+   userDTO.setNome(user.getNome()); 
+   userDTO.setEndereco(user.getEndereco()); 
+   userDTO.setbi(user.getbi()); 
+   userDTO.setEmail(user.getEmail()); 
+   userDTO.setTelefone(user.getTelefone()); 
+   userDTO.setDataCadastro(user.getDataCadastro()); 
+return userDTO; 
+}
+
 
 }
 
